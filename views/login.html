@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/mdb.min.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/mdb.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4">
+    
+    <form method="post" action="/login" class="text-center border border-light p-5">
+      
+      <p class="h4 mb-4 text-center">LOG IN</p> 
+  		<input class="form-control mb-4" type="text" name="username" id="username" required="required" >
+  		
+  		<input type="password" name="password" id="password" required="required" class="form-control mb-4">
+  		
+      <input type="submit" value="login" id="submit" class="btn btn-info btn-block my-4">
+
+      <p>Not a member?
+          <a href="register">Register</a>
+      </p>
+      <p>
+          <a href="/">Return to index</a>
+      </p>
+
+    </form>
+
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
+<script src="/javascripts/jquery-3.3.1.min.js"></script>
+  <script>
+    //在存储中设置值
+    $("#submit").click(function () {
+      //存储输入框中填入的值
+      localStorage.setItem("username", $("#username").val());
+      localStorage.setItem("password", $("#password").val());
+    })
+    //从存储中获取值
+    // $(
+    //   function myStorage() {
+    //     //刷新后重新获取输入框中填入的值
+    //     var name = localStorage.getItem("name");
+    //     var phone = localStorage.getItem("phone");
+    //     var province = localStorage.getItem("province");
+    //     //将重新获取的值显示到表单元素中
+    //     $("#name").val(name);
+    //     $("#phone").val(phone);
+    //     $("#province").val(province);
+    //     //重新读取选中的radio
+    //     $(":radio").removeAttr("checked");//这里很重要
+    //     var kk_val = localStorage.getItem("k_val");; 
+    //     })
+    //   }
+    // )
+    // myStorage();
+  </script>
